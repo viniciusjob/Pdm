@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (input == "" || input.isEmpty()) {
 
                 } else {
-                    int inputInt = Integer.parseInt(input);
-                    int result = (((inputInt * 9) / 5) + 32);
+                    double inputDouble = Double.parseDouble(input);
+                    double result = (((inputDouble * 9) / 5) + 32);
                     if (txtView.getText().toString().length() < 11){
                         txtView.setText(txtView.getText().toString() + " " + result);
                     } else {
