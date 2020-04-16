@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pdm</string>
+    <string name="contato" translatable="false"><u>Contato:</u></string>
 </resources>

@@ -2,6 +2,7 @@ package com.example.pdm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -11,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     private int i = 0;
 
@@ -22,25 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d("CICLO", "onCreate");
 
         Button btn = (Button) findViewById(R.id.btnButton);
-        btn.setOnClickListener(this);
 
-//        edt.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//
-//
-//            }
-//        });
     }
 
     @Override
@@ -76,31 +59,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btnButton:
-                Log.d("Click", "Click por Switch");
-
-                EditText edt = (EditText) findViewById(R.id.editText);
-                TextView txtView = (TextView) findViewById(R.id.txtView);
-                String input;
-                input = edt.getText().toString();
-                if (input == "" || input.isEmpty()) {
-
-                } else {
-                    double inputDouble = Double.parseDouble(input);
-                    double result = (((inputDouble * 9) / 5) + 32);
-                    if (txtView.getText().toString().length() < 11){
-                        txtView.setText(txtView.getText().toString() + " " + result);
-                    } else {
-                        txtView.setText("Resultado: " + result);
-                    }
-                }
-        }
-    }
-
-    @Override
     public void onContentChanged() {
         super.onContentChanged();
     }
+
+    public void navigateToConvertTemp(View view) { startActivity(new Intent(this, ResultActivity.class)); }
+
+    public void aula4Click(View view) { startActivity(new Intent(this, Aula4Activity.class)); }
 }
