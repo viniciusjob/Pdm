@@ -21,7 +21,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:onClick="aula4Click"
-        android:text="Aula4"
+        android:text="Lista de Botões"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="aula7Click"
+        android:text="Aula7"
         tools:ignore="MissingConstraints" />
 
 </LinearLayout>

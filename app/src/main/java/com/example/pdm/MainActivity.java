@@ -66,4 +66,6 @@ public class MainActivity extends AppCompatActivity {
     public void navigateToConvertTemp(View view) { startActivity(new Intent(this, ResultActivity.class)); }
 
     public void aula4Click(View view) { startActivity(new Intent(this, Aula4Activity.class)); }
+
+    public void aula7Click(View view) { startActivity(new Intent(this, Aula7Activity.class)); }
 }
